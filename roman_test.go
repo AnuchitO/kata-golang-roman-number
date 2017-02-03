@@ -2,40 +2,22 @@ package roman
 
 import "testing"
 
-func TestInput1ShouldBeI(t *testing.T) {
-	assertEqual(t, roman(1), "I")
-}
+func TestCaseRomanNumber(t *testing.T) {
+	romans := map[int]string{
+		1: "I",
+		2: "II",
+		3: "III",
+		4: "IV",
+		5: "V",
+		6: "VI",
+		9: "IX",
+		10: "X",
+		11: "XI",
+	}
 
-func TestInput2ShouldBeII(t *testing.T) {
-	assertEqual(t, roman(2), "II")
-}
-
-func TestInput3ShouldBeIII(t *testing.T) {
-	assertEqual(t, roman(3), "III")
-}
-
-func TestInput4ShouldBeIV(t *testing.T) {
-	assertEqual(t, roman(4), "IV")
-}
-
-func TestInput5ShouldBeIV(t *testing.T) {
-	assertEqual(t, roman(5), "V")
-}
-
-func TestInput6ShouldBeVI(t *testing.T) {
-	assertEqual(t, roman(6), "VI")
-}
-
-func TestInput9ShouldBeIX(t *testing.T) {
-	assertEqual(t, roman(9), "IX")
-}
-
-func TestInput10ShouldBeX(t *testing.T) {
-	assertEqual(t, roman(10), "X")
-}
-
-func TestInput11ShouldBeXI(t *testing.T) {
-	assertEqual(t, roman(11), "XI")
+	for number, expected := range romans {
+		assertEqual(t, roman(number), expected)
+	}
 }
 
 func assertEqual(t *testing.T, r, expected string) {
