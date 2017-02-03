@@ -1,20 +1,23 @@
 package roman
 
+type Pair struct {
+	number int
+	roman string
+}
+
 func roman(number int) string {
-	if number >= 10 {
-		return "X" + roman(number - 10)
+	pairs := []Pair{
+		Pair{10, "X"},
+		Pair{9, "IX"},
+		Pair{5, "V"},
+		Pair{4, "IV"},
+		Pair{1, "I"},
 	}
-	if number >= 9 {
-		return "IX" + roman(number - 9)
-	}
-	if number >= 5 {
-		return "V" + roman(number - 5)
-	}
-	if number >= 4 {
-		return "IV" + roman(number - 4)
-	}
-	if number >= 1 {
-		return "I" + roman(number - 1)
+
+	for _, p := range pairs {
+		if number >= p.number {
+			return p.roman + roman(number - p.number)
+		}
 	}
 
 	return ""
