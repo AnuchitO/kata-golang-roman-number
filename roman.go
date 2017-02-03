@@ -1,8 +1,8 @@
 package roman
 
 func roman(number int) string {
-	if number == 5 {
-		return "V"
+	if number >= 5 {
+		return "V" + roman(number - 5)
 	}
 	if number == 4 {
 		return "IV"
