@@ -7,6 +7,7 @@ type Pair struct {
 
 func roman(number int) string {
 	pairs := []Pair{
+		Pair{100, "C"},
 		Pair{90, "XC"},
 		Pair{50, "L"},
 		Pair{40, "XL"},
