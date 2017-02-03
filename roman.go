@@ -1,12 +1,9 @@
 package roman
 
 func roman(number int) string {
-	if number == 3 {
-		return "III"
+	if number >= 1 {
+		return "I" + roman(number - 1)
 	}
 
-	if number == 2 {
-		return "II"
-	}
-	return "I"
+	return ""
 }
