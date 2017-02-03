@@ -15,6 +15,7 @@ func TestCaseRomanNumber(t *testing.T) {
 		11: "XI",
 		40: "XL",
 		50: "L",
+		90: "XC",
 	}
 
 	for number, expected := range romans {
