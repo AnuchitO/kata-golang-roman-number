@@ -17,3 +17,11 @@ func TestInput2ShouldBeII(t *testing.T) {
 		t.Errorf("expected II but got '%s'", r)
 	}
 }
+
+func TestInput3ShouldBeIII(t *testing.T) {
+	r := roman(3)
+
+	if r != "III" {
+		t.Errorf("expected III but got '%s'", r)
+	}
+}
