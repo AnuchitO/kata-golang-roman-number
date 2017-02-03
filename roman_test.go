@@ -3,21 +3,15 @@ package roman
 import "testing"
 
 func TestInput1ShouldBeI(t *testing.T) {
-	r := roman(1)
-
-	assertEqual(t, r, "I")
+	assertEqual(t, roman(1), "I")
 }
 
 func TestInput2ShouldBeII(t *testing.T) {
-	r := roman(2)
-
-	assertEqual(t, r, "II")
+	assertEqual(t, roman(2), "II")
 }
 
 func TestInput3ShouldBeIII(t *testing.T) {
-	r := roman(3)
-
-	assertEqual(t, r, "III")
+	assertEqual(t, roman(3), "III")
 }
 
 func assertEqual(t *testing.T, r, expected string) {
