@@ -30,6 +30,10 @@ func TestInput9ShouldBeIX(t *testing.T) {
 	assertEqual(t, roman(9), "IX")
 }
 
+func TestInput10ShouldBeX(t *testing.T) {
+	assertEqual(t, roman(10), "X")
+}
+
 func assertEqual(t *testing.T, r, expected string) {
 	if r != expected{
 		t.Errorf("expected '%s' but got '%s'", expected, r)

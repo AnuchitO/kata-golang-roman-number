@@ -1,6 +1,9 @@
 package roman
 
 func roman(number int) string {
+	if number == 10 {
+		return "X"
+	}
 	if number == 9 {
 		return "IX"
 	}
